@@ -50,7 +50,7 @@ export default function CustomCursor() {
       className={`
         fixed top-0 left-0 pointer-events-none
         z-9999
-        rounded-full bg-s mix-blend-exclusion
+        rounded-full bg-s mix-blend-exclusion max-lg:hidden
         
       `}
       style={{ translateX: smoothX, translateY: smoothY }}

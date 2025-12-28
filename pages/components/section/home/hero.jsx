@@ -1,15 +1,35 @@
 "use client";
+
 import { useMousePosition } from "@/hooks/useMousePosition";
-import { motion, useTransform } from "motion/react";
+import { useGyroscope } from "@/hooks/useGyroscope";
+import { motion, useTransform, useMotionValue } from "motion/react";
+import { useEffect } from "react";
 
 const HomeSection = () => {
   const { x, y } = useMousePosition();
+  const { beta, gamma } = useGyroscope(true);
 
-  const rotateY = useTransform(x, [-0.5, 0.5], [-20, 20]);
-  const rotateX = useTransform(y, [-0.5, 0.5], [20, -20]);
+  const rotateX = useMotionValue(0);
+  const rotateY = useMotionValue(0);
+
+  const mouseRotateY = useTransform(x, [-0.5, 0.5], [-20, 20]);
+  const mouseRotateX = useTransform(y, [-0.5, 0.5], [20, -20]);
+
+  useEffect(() => {
+    const isMobile = window.matchMedia("(pointer: coarse)").matches;
+
+    if (isMobile) {
+      rotateX.set(Math.max(-20, Math.min(20, beta / 3)));
+      rotateY.set(Math.max(-20, Math.min(20, gamma / 3)));
+    } else {
+      // Mouse
+      rotateX.set(mouseRotateX.get());
+      rotateY.set(mouseRotateY.get());
+    }
+  }, [beta, gamma, mouseRotateX, mouseRotateY, rotateX, rotateY]);
 
   return (
-    <section className="bg-bg-light h-screen p-10 overflow-hidden ">
+    <section className="bg-bg-light h-screen p-10 overflow-hidden">
       <motion.div
         className="absolute inset-0 flex items-center justify-center"
         style={{ perspective: 1400 }}
@@ -33,6 +53,7 @@ const HomeSection = () => {
             src="/logo-dark.svg"
             className="w-full h-full"
             style={{ transform: "translateZ(50px)" }}
+            draggable={false}
           />
 
           <div
