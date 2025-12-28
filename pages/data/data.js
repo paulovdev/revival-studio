@@ -1,0 +1,70 @@
+export const data = [
+  {
+    id: "robots",
+    title: "ROBOTS®",
+    year: 2025,
+    stack: ["3D", "BLENDER"],
+    description: [
+      `<span class="text-p/50">ROBOTS®</span> is a Creative production studio`,
+      `offers a wide array of creative services.`,
+      `Our expertise spans commercials, music`,
+      `videos, digital content, and a  variety`,
+      `of other projects.`,
+    ],
+    client: "robots®",
+    cover: "/works/work-1/img-1.jpg",
+    imgs: [
+      "/works/work-1/img-1.jpg",
+      "/works/work-1/img-2.jpg",
+      "/works/work-1/img-3.jpg",
+      "/works/work-1/img-4.jpg",
+      "/works/work-1/img-5.jpg",
+    ],
+  },
+
+  {
+    id: "restaure",
+    title: "RESTAURE",
+    year: 2025,
+    stack: ["ART", "CONCEPT"],
+    description: [
+      `<span class="text-p/50">RESTAURE</span> is a Creative production studio`,
+      `offers a wide array of creative services.`,
+      `Our expertise spans commercials, music`,
+      `videos, digital content, and a  variety`,
+      `of other projects.`,
+    ],
+    client: "RESTAURE®",
+    cover: "/works/work-2/img-1.jpg",
+    imgs: [
+      "/works/work-2/img-1.jpg",
+      "/works/work-2/img-2.jpg",
+      "/works/work-2/img-3.jpg",
+      "/works/work-2/img-4.jpg",
+      "/works/work-2/img-5.jpg",
+    ],
+  },
+
+  {
+    id: "x",
+    title: "X®",
+    year: 2025,
+    stack: ["3D", "BLENDER"],
+    description: [
+      `<span class="text-p/50">X®</span> is a Creative production studio`,
+      `offers a wide array of creative services.`,
+      `Our expertise spans commercials, music`,
+      `videos, digital content, and a  variety`,
+      `of other projects.`,
+    ],
+    client: "X®",
+    cover: "/works/work-3/img-1.jpg",
+    imgs: [
+      "/works/work-3/img-1.jpg",
+      "/works/work-3/img-2.jpg",
+      "/works/work-3/img-3.jpg",
+      "/works/work-3/img-4.jpg",
+      "/works/work-3/img-5.jpg",
+    ],
+  },
+];

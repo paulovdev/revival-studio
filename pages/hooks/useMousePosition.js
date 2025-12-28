@@ -1,0 +1,25 @@
+import { useEffect } from "react";
+import { useMotionValue, useSpring } from "motion/react";
+
+export function useMousePosition() {
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+
+  const smoothX = useSpring(x, { stiffness: 200, damping: 25 });
+  const smoothY = useSpring(y, { stiffness: 200, damping: 25 });
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      const xNorm = e.clientX / window.innerWidth - 0.5;
+      const yNorm = e.clientY / window.innerHeight - 0.5;
+
+      x.set(xNorm);
+      y.set(yNorm);
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, [x, y]);
+
+  return { x: smoothX, y: smoothY };
+}
