@@ -1,5 +1,5 @@
 "use client";
-import { useMousePosition } from "@/pages/hooks/useMousePosition";
+import { useMousePosition } from "@/hooks/useMousePosition";
 import { motion, useTransform } from "motion/react";
 
 const HomeSection = () => {
