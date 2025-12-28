@@ -2,7 +2,7 @@ import Head from "next/head";
 import Nav from "../components/nav";
 import WorksSection from "../components/section/works/works";
 
-import { data } from "../data/data";
+import { data } from "@/data/data";
 import Lenis from "lenis";
 import { useEffect, useRef } from "react";
 

@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 
 import WorkGallery from "@/pages/components/section/works/gallery";
 import WorkIntro from "@/pages/components/section/works/intro";
-import { data } from "@/pages/data/data";
+import { data } from "@/data/data";
 import { useRouter } from "next/router";
 import Nav from "@/pages/components/nav";
 
