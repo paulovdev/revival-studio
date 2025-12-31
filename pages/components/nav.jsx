@@ -65,7 +65,7 @@ const Nav = () => {
     <>
       <nav
         className="fixed top-0 left-0 px-10 py-5 w-full grid grid-cols-12 items-center z-100 mix-blend-difference 
-      max-lg:px-5"
+      max-lg:px-5 max-lg:flex max-lg:justify-between"
       >
         <div
           className="overflow-hidden h-fit col-start-1 col-span-2"

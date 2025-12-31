@@ -32,8 +32,8 @@ export default function App({ Component, pageProps, router }) {
 
   useEffect(() => {
     const isDark = pathname === "/" || pathname.startsWith("/works/");
-    document.body.classList.toggle("bg-[#fdfdfd]", isDark);
-    document.body.classList.toggle("bg-[#030303]", !isDark);
+    document.body.classList.toggle("bg-[#030303]", isDark);
+    document.body.classList.toggle("bg-[#fdfdfd]", !isDark);
   }, [pathname]);
 
   useEffect(() => {
@@ -58,7 +58,7 @@ export default function App({ Component, pageProps, router }) {
         <AnimatePresence mode="wait">
           <motion.div
             key={pathname}
-            className="relative top-0 left-0 size-full z-8888"
+            className="relative top-0 left-0  size-full z-8888"
             variants={clipVariants}
             initial="initial"
             animate="animate"

@@ -11,6 +11,7 @@ export default function WorkPage({ data }) {
 
   useEffect(() => {
     const lenis = new Lenis({ autoRaf: true, duration: 1 });
+
     lenisRef.current = lenis;
 
     return () => lenis.destroy();
@@ -18,7 +19,7 @@ export default function WorkPage({ data }) {
 
   return (
     <>
-      <section className="p-10 py-20 w-full h-full bg-s max-lg:p-5 max-lg:py-20">
+      <section className="p-10 py-20 min-h-screen w-full h-full bg-s max-lg:p-5 max-lg:py-20">
         <div className="size-full flex justify-between items-start gap-6 max-lg:flex-col">
           <div className="w-full flex-2 max-lg:mt-10 max-lg:flex-none">
             <WorkGallery data={data} />

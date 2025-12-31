@@ -26,7 +26,7 @@ const Works = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Nav />
+      <Nav  />
       <main ref={lenisRef} className="min-h-screen">
         <WorksSection data={data} />
       </main>

@@ -39,7 +39,10 @@ const overlayVariants = {
 };
 
 const socials = [
-  { label: "Instagram", href: "https://instagram.com" },
+  {
+    label: "code source",
+    href: "https://paulovdev.gumroad.com/l/layaut-source-access",
+  },
   { label: "LinkedIn", href: "https://linkedin.com" },
   { label: "Behance", href: "https://behance.net" },
   { label: "Dribbble", href: "https://dribbble.com" },
@@ -135,27 +138,60 @@ const Contact = ({ isOpen, onClose }) => {
                       Based in Brazil — working worldwide
                     </motion.p>
                   </div>
-                </div>
-
-                <ul className="overflow-hidden flex gap-6">
-                  {socials.map((item, i) => (
-                    <motion.li
-                      key={item.label}
-                      {...textSlideAnim}
-                      custom={5 + i}
-                      data-cursor="hover"
-                    >
-                      <a
-                        href={item.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[14px] tracking-[-0.60px] leading-[100%] uppercase hover:opacity-60 transition-opacity cursor-default"
+                  <div className="flex items-center gap-4">
+                    <div className="overflow-hidden h-fit max-lg:mb-8">
+                      <motion.p
+                        className="text-[12px] tracking-[-0.60px] leading-[100%] uppercase block"
+                        {...textSlideAnim}
+                        custom={5}
                       >
-                        {item.label}
-                      </a>
-                    </motion.li>
-                  ))}
-                </ul>
+                        <span className=" opacity-60">FONT: </span>
+                        GOOGLE
+                      </motion.p>
+                    </div>
+                    <div className="overflow-hidden h-fit max-lg:mb-8">
+                      <motion.p
+                        className="text-[12px] tracking-[-0.60px] leading-[100%] uppercase block"
+                        {...textSlideAnim}
+                        custom={6}
+                      >
+                        <span className=" opacity-60">IMAGES: </span>
+                        UNSPLASH & PEXELS
+                      </motion.p>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col items-end">
+                  <div className="overflow-hidden h-fit mb-4">
+                    <motion.p
+                      className="text-[12px] tracking-[-0.60px] leading-[120%] uppercase block opacity-60"
+                      {...textSlideAnim}
+                      custom={7}
+                    >
+                      ONLY A CONCEPT WORK DONE WITH PAULOVDEV TO SHOW UR
+                      CAPABILITIES
+                    </motion.p>
+                  </div>
+                  <ul className="overflow-hidden flex gap-6">
+                    {socials.map((item, i) => (
+                      <motion.li
+                        key={item.label}
+                        {...textSlideAnim}
+                        custom={8 + i}
+                        data-cursor="hover"
+                      >
+                        <a
+                          href={item.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[14px] tracking-[-0.60px] leading-[100%] uppercase hover:opacity-60 transition-opacity cursor-default"
+                        >
+                          {item.label}
+                        </a>
+                      </motion.li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </motion.div>

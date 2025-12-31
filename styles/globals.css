@@ -19,7 +19,7 @@
   --color-f: #101010;
   --color-ff: #212121;
   --color-bg-light: #ededed;
-  --color-bg-dark: #000000;
+  --color-bg-dark: #020202;
 
   --breakpoint-full-ds: 1900px;
   --breakpoint-ds: 1262px;
@@ -61,5 +61,5 @@ body {
   opacity: 0.03;
   z-index: 1000;
   pointer-events: none;
-  background: url("/noise.gif");
+  background: url("/public/noise.gif");
 }

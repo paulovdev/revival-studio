@@ -5,6 +5,7 @@ import { useEffect, useRef } from "react";
 import { useInView } from "react-intersection-observer";
 import Lenis from "lenis";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const textSlideAnim = {
   initial: { y: "100%", opacity: 0 },
@@ -21,7 +22,7 @@ const textSlideAnim = {
 
 const Cards = ({ card }) => {
   const container = useRef(null);
-
+  const router = useRouter();
   const { ref, inView } = useInView({
     threshold: 0.6,
     triggerOnce: false,
@@ -31,13 +32,18 @@ const Cards = ({ card }) => {
     target: container,
     offset: ["start start", "end start"],
   });
+  const customNavigate = () => {
+    setTimeout(() => {
+      router.push(`/works/${card.id}`);
+    }, 100);
+  };
 
   const y = useTransform(scrollYProgress, [0, 1], ["0vh", "50vh"]);
 
   return (
-    <Link
+    <motion.div
       ref={container}
-      href={`/works/${card.id}`}
+      onClick={customNavigate}
       className={`w-screen h-screen overflow-hidden relative ${
         inView ? "brightness-100" : "brightness-10"
       } transition-all duration-500 cursor-default`}
@@ -148,7 +154,7 @@ const Cards = ({ card }) => {
           </div>
         </div>
       </motion.div>
-    </Link>
+    </motion.div>
   );
 };
 

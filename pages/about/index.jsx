@@ -4,7 +4,7 @@ import Nav from "../components/nav";
 const About = () => {
   return (
     <>
-      <Nav />
+      <Nav   />
 
       <main className="min-h-screen">
         <AboutSection />

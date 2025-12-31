@@ -3,7 +3,7 @@
 import { motion } from "motion/react";
 
 const headlinePhrases = [
-  `<span class="text-s/50">REVIVAL®</span> is a Creative production studio rooted in Paris,`,
+  `<span class="text-s/50">REVIVAL®</span> is a Creative production studio rooted in Brazil,`,
   `offers a wide array of creative services. Our expertise`,
   `spans commercials, music videos, digital content, and a `,
   `variety of other projects.`,

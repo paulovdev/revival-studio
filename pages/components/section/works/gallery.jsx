@@ -32,6 +32,7 @@ export default function WorkGallery({ data }) {
               width={2000}
               height={2000}
               className="object-cover w-full h-screen max-lg:h-[75vh] max-md:h-[50vh]"
+              preload={true}
               alt={item.alt || data.title || "Work media"}
             />
           </motion.figure>
